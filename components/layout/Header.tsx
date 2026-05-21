@@ -47,6 +47,7 @@ export function Header() {
             strokeWidth="2"
             aria-hidden
           >
+            <title>{open ? "Close menu" : "Open menu"}</title>
             {open ? (
               <path d="M6 6l12 12M18 6L6 18" />
             ) : (
