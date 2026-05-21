@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Freelancer boilerplate
 
-## Getting Started
+Next.js 16 portfolio site with static TypeScript content. One-page home with anchored sections plus `/work` and case study pages.
 
-First, run the development server:
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router)
+- TypeScript
+- Tailwind CSS v4
+- Static content in `content/`
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` before deploying.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customize content
 
-## Learn More
+| File | What to edit |
+|------|----------------|
+| `content/site.ts` | Name, role, tagline, email, nav, SEO |
+| `content/services.ts` | Freelancer service offerings |
+| `content/projects.ts` | Projects and case study copy |
 
-To learn more about Next.js, take a look at the following resources:
+Add a project by appending to `projects` in `content/projects.ts`. Each entry needs a unique `slug`; the page `/work/[slug]` is generated automatically.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Replace thumbnails in `public/projects/` (SVG or images).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
+```
+app/              Routes (home, work, case studies)
+components/       UI, layout, sections
+content/          Static site data
+lib/content.ts    Helpers for projects
+public/projects/  Project images
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` — development server
+- `npm run build` — production build
+- `npm run start` — run production build
+- `npm run lint` — ESLint
+
+## Deploy
+
+Deploy to [Vercel](https://vercel.com) or any Node host. Set `NEXT_PUBLIC_SITE_URL` to your production URL.
