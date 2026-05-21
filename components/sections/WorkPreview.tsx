@@ -10,7 +10,7 @@ export function WorkPreview() {
     <Section
       id="work"
       title="Selected work"
-      description="Recent projects. Each case study includes goals, approach, and outcomes."
+      description="Selected client and personal work from icapps, VAB Rijschool, and fullstack builds."
     >
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {featured.map((project) => (

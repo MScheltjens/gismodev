@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { BrandName } from "@/components/BrandName";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/content/site";
 
@@ -11,12 +12,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between">
-        <Link
-          href="/"
-          className="text-sm font-semibold tracking-tight hover:opacity-80"
-        >
-          {site.name}
-        </Link>
+        <BrandName
+          className="text-sm font-semibold tracking-tight"
+          linkNameToHome
+          nameClassName="hover:opacity-80"
+          companyClassName="hover:opacity-80"
+        />
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
           {site.nav.map((item) => (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandName } from "@/components/BrandName";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/content/site";
 
@@ -9,7 +10,9 @@ export function Footer() {
     <footer className="mt-auto border-t border-border py-12">
       <Container className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="font-medium">{site.name}</p>
+          <p className="font-medium">
+            <BrandName companyClassName="hover:opacity-80" />
+          </p>
           <p className="mt-1 text-sm text-muted-foreground">{site.role}</p>
         </div>
         <ul className="flex flex-wrap gap-4">

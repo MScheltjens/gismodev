@@ -1,12 +1,12 @@
 import { Section } from "@/components/layout/Section";
-import { services } from "@/content/services";
+import { services, servicesSection } from "@/content/services";
 
 export function Services() {
   return (
     <Section
       id="services"
       title="Services"
-      description="Focused offerings for teams that need design and engineering in one place."
+      description={servicesSection.description}
       className="bg-muted/40"
     >
       <ul className="grid gap-6 sm:grid-cols-2">

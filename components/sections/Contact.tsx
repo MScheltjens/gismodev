@@ -7,7 +7,7 @@ export function Contact() {
     <Section
       id="contact"
       title="Contact"
-      description="Tell me about your project—timeline, budget range, and what success looks like."
+      description="Open to fullstack and frontend-focused roles in Hamburg, or freelance projects via Gismo.dev."
       className="bg-muted/40"
     >
       <div className="max-w-xl space-y-6">
@@ -15,7 +15,7 @@ export function Contact() {
           I usually reply within one business day. For a faster start, include
           links to references or an existing site.
         </p>
-        <Button href={`mailto:${site.email}`}>Email {site.email}</Button>
+        <Button href={`mailto:${site.email}`}>Send email</Button>
         <ul className="flex flex-wrap gap-4 pt-2">
           {site.socials.map((social) => (
             <li key={social.label}>
