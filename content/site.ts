@@ -35,9 +35,7 @@ export const site = {
   nav: [
     { label: "About", href: "/#about" },
     { label: "Services", href: "/#services" },
-    { label: "Work", href: "/#work" },
     { label: "Contact", href: "/#contact" },
-    { label: "All projects", href: "/work" },
   ] satisfies NavItem[],
   metadata: {
     title: "Mathias Scheltjens | Gismo.dev — Fullstack Developer",
