@@ -1,6 +1,7 @@
 # Portfolio — Freelancer boilerplate
 
 Next.js 16 portfolio site with static TypeScript content. One-page home with anchored sections plus `/work` and case study pages.
+This is a small project I use to explore Cursor, exploring heavily AI-enhanced developping!
 
 ## Stack
 
